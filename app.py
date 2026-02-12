@@ -16,7 +16,9 @@ import numpy as np
 import pickle
 
 # Load Trained Model
-with open("model.pkl", "rb") as file:
+import os
+model_path = os.path.join(os.getcwd(), "model.pkl")
+with open(model_path, "rb") as file:
     model = pickle.load(file)
 
 # App UI
